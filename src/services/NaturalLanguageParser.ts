@@ -230,20 +230,30 @@ export class NaturalLanguageParser extends NaturalLanguageParserCore {
 		const userFields = parsed.userFields as Record<string, unknown>;
 
 		for (const userField of this.taskNotesUserFields) {
-			if (userField.type !== "boolean") continue;
-
 			const value = userFields[userField.id];
 			if (typeof value !== "string") continue;
 
-			const normalized = value.trim().toLowerCase();
-			if (normalized === "true") {
-				userFields[userField.id] = true;
-			} else if (normalized === "false") {
-				userFields[userField.id] = false;
+			if (userField.type === "boolean") {
+				const normalized = value.trim().toLowerCase();
+				if (normalized === "true") {
+					userFields[userField.id] = true;
+				} else if (normalized === "false") {
+					userFields[userField.id] = false;
+				}
+			} else if (userField.type === "date") {
+				userFields[userField.id] = this.normalizeDateUserFieldValue(value) ?? value;
 			}
 		}
 
 		return parsed;
+	}
+
+	private normalizeDateUserFieldValue(value: string): string | null {
+		const trimmed = value.trim();
+		if (!trimmed) return null;
+
+		const parsed = super.parseInput(trimmed);
+		return parsed.scheduledDate || parsed.dueDate || null;
 	}
 
 	private extractLinkedUserFields(input: string, parsed: ParsedTaskData): ParsedTaskData {
