@@ -457,6 +457,17 @@ export class TaskContextMenu {
 
 		this.menu.addSeparator();
 
+		// Edit Task
+		this.menu.addItem((item) => {
+			item.setTitle(this.t("modals.taskEdit.title"));
+			item.setIcon("pencil");
+			item.onClick(() => {
+				void plugin.openTaskEditModal(task, () => {
+					this.options.onUpdate?.();
+				});
+			});
+		});
+
 		// Open Note
 		this.menu.addItem((item) => {
 			item.setTitle(this.t("contextMenus.task.openNote"));

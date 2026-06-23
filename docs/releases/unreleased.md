@@ -39,6 +39,8 @@ When a change has user-facing documentation, include a canonical tasknotes.dev l
 - (#2048) Added current due and scheduled dates to the edit modal's task information. Thanks to @1activegeek for requesting this.
 - (#2058, #2059) Added natural-language parsing and the full date picker to date-type custom fields. Thanks to @chmac for requesting this.
 - (#2060) Added date-type custom fields to the task right-click menu under **Custom dates**. Thanks to @chmac for requesting this.
+- (#2067) Added an **Edit task** action to the task card context menu, including inline task cards. Thanks to @DarkCellar for requesting this.
+- (#2068) Added `reminders` input support to the MCP `tasknotes_create_task` and `tasknotes_update_task` tools. Thanks to @Spirit597 for requesting this.
 
 ## Fixed
 
