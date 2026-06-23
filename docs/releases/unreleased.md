@@ -41,6 +41,7 @@ When a change has user-facing documentation, include a canonical tasknotes.dev l
 - (#2060) Added date-type custom fields to the task right-click menu under **Custom dates**. Thanks to @chmac for requesting this.
 - (#2067) Added an **Edit task** action to the task card context menu, including inline task cards. Thanks to @DarkCellar for requesting this.
 - (#2068) Added `reminders` input support to the MCP `tasknotes_create_task` and `tasknotes_update_task` tools. Thanks to @Spirit597 for requesting this.
+- (#2069) Added an **Add project** action to the Quick Actions palette. Thanks to @chmac for requesting this.
 
 ## Fixed
 
