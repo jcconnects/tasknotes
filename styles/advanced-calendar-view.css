@@ -778,6 +778,7 @@ body.is-mobile .timeblock-attachment-remove {
     border-bottom: 1px solid var(--background-modifier-border-hover);
     background: var(--background-primary);
     color: var(--text-normal);
+    overflow: visible;
 }
 
 .advanced-calendar-view .fc-timegrid-slot {

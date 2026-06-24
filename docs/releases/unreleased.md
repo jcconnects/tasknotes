@@ -52,6 +52,7 @@ When a change has user-facing documentation, include a canonical tasknotes.dev l
 - (#2045) Fixed custom modal fields assigned to Basic Information not appearing in task creation or edit modals. Thanks to @chmac for reporting this.
 - (#2063) Fixed project autocomplete storing ambiguous project links without the selected note's folder path. Thanks to @chmac for reporting this.
 - (#2072) Fixed inline task links to headings so they show both the task title and heading instead of only the heading. Thanks to @spasche for reporting this.
+- (#2075) Fixed multiday Calendar events being clipped to one day when a Base is embedded in Reading view. Thanks to @ddevaal for reporting this.
 
 ## Changed
 
