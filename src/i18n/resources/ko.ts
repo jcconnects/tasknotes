@@ -2578,6 +2578,8 @@ export const ko: TranslationTree = {
 			},
 			metadata: {
 				totalTrackedTime: "총 기록 시간:",
+				due: "마감:",
+				scheduled: "예정:",
 				created: "생성:",
 				modified: "수정:",
 				file: "파일:"
