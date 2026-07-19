@@ -18,7 +18,7 @@ function isBlankValue(value: unknown): boolean {
 }
 
 function propertyValuesMatch(left: unknown, right: string | boolean): boolean {
-	return left === right;
+    return right === "*" || left === right;
 }
 
 export function getFrontmatterTags(value: unknown): string[] {
